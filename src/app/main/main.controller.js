@@ -7,12 +7,9 @@
 
     /** @ngInject */
     function MainController($scope) {
-        console.log("test")
-     $scope.first = null;
-     $scope.seccond = null;
-     $scope.third = null;
-     function test() {
-          var first=Math.floor(Math.random() * 7)
+     $scope.lucky5 = function() {
+         var rnd = function(){return Math.floor(Math.random() * 7 + 1)};
+         $scope.result = [rnd(), rnd(), rnd()];
         };
     }
 })();
